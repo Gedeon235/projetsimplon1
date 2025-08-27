@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élégance - Prêt-à-porter de qualité</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ÉléganceShoping</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="cart-btn" id="cartBtn">🛒 <span class="cart-count">0</span></button>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h2>Découvrez votre style unique</h2>
+            <p>Collection printemps-été 2025</p>
+            <button class="cta-btn" id="exploreBtn">Découvrir</button>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+        <div class="container">
+            <h2>Notre Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="femme">Femme</button>
+                <button class="filter-btn" data-filter="homme">Homme</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="femme">
+                    <img src="./images/robe.webp" alt="Robe d'été" class="product-img">
+                    <h3>Robe d'été</h3>
+                    <p class="price"> 35000FCFA</p>
+                    <button class="add-to-cart" onclick="addToCart(this)">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="homme">
+                    <img src="./images/hom.jpeg" alt="Chemise en lin" class="product-img">
+                    <h3>Chemise en lin</h3>
+                    <p class="price">10000FCFA</p>
+                    <button class="add-to-cart" onclick="addToCart(this)">Ajouter au panier</button>
+                </div>
+                <div class="product-card" data-category="femme">
+                    <img src="./images/jub.webp" alt="Jupe plissée" class="product-img">
+                    <h3>Jupe plissée</h3>
+                    <p class="price">5000FCFA</p>
+                    <button class="add-to-cart" onclick="addToCart(this)">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Livraison gratuite</h3>
+                    <p>Livraison offerte à partir de 100€ d'achat</p>
+                </div>
+                <div class="service-card">
+                    <h3> Retours facile</h3>
+                    <p>30 jours pour changer d'avis</p>
+                </div>
+                <div class="service-card">
+                    <h3>Emballage cadeau</h3>
+                    <p>Service d'emballage cadeau gratuit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de nous</h2>
+            <p>Élégance propose des vêtements de qualité depuis 2010. Notre mission est de vous offrir des pièces uniques qui vous mettent en valeur.</p>
+            <button class="toggle-btn" id="toggleHistory">Voir notre histoire</button>
+            <div class="history-content" id="historyContent" style="display: none;">
+                <p>Fondée en 2010, notre boutique est née d'une passion pour la mode éthique et durable...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Élégance. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
